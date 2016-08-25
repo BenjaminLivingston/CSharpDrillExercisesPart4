@@ -106,7 +106,83 @@ namespace CSharpDrillExercisesPart4
             ex.clrScreen();
 
 
+
             // Nullable Type Example
+            Console.WriteLine("Nullable types have the benefit of having set values or");
+            Console.WriteLine("can be set to a null value.  For these examples I will");
+            Console.WriteLine("be using a number (int), a boolean, and a character.");
+
+            Console.WriteLine("\nThese variables will be created as nullable types.");
+            int? i = null;
+            bool? test = null;
+            char? letter = null;
+
+            ex.clrScreen(); // Clear screen
+
+
+            Console.WriteLine("There are two ways to test if the variable has a value.");
+            Console.WriteLine(".HasValue or != null");
+
+            if (i.HasValue)
+            {
+                Console.WriteLine("\nThe value of the integer is {0}", i.Value);
+            }
+            else
+            {
+                Console.WriteLine("\nThe integer does not have a value.");
+            }
+
+            if (test != null)
+            {
+                Console.WriteLine("\nThe value of the boolean flag is {0}", i.Value);
+            }
+            else
+            {
+                Console.WriteLine("\nThe boolean flag does not have a value.");
+            }
+
+            ex.clrScreen(); // Clear screen
+
+
+            Console.WriteLine("A value can be set to another variable but there will");
+            Console.WriteLine("be an error if the value is not yet set.");
+            int n1 = 0;
+            if (i.HasValue)
+            {
+                n1 = i.Value;
+            }
+            else
+            {
+                n1 = 0;
+            }
+            Console.WriteLine("\nThe number is set to {0}", n1);
+
+            ex.clrScreen(); // Clear screen
+
+
+            Console.WriteLine("The variable can be directly set without issues.");
+            letter = 'g';
+            Console.WriteLine("\nThe character is set to '{0}'", letter);
+
+            ex.clrScreen(); // Clear screen
+
+
+            Console.WriteLine("Operators can be used normally.  If a null value is");
+            Console.WriteLine("added to a non-null value the result will be null.\n\n");
+
+            Console.WriteLine("Any comparison will return false except != or if testing");
+            Console.WriteLine("whether two null values are equal to each other.\n\n");
+
+            Console.WriteLine("Boolean nullable contains three types true, false, and null.\n\n");
+
+            Console.WriteLine("Lastly, the ?? operator can be used to set a default value");
+            Console.WriteLine("when assigning to a non-nullable type.");
+
+            i = null;
+            n1 = i ?? 0;    // In this case n1 is set to 0 if i is set to null
+
+            // Clear screen after example
+            ex.clrScreen();
 
 
 
