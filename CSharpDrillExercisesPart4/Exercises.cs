@@ -45,6 +45,24 @@ namespace CSharpDrillExercisesPart4
 
 
 
+        // Example Enumerations
+        enum Months : byte
+        {
+            January,
+            February,
+            March,
+            April,
+            May,
+            June,
+            July,
+            August,
+            September,
+            October,
+            November,
+            December
+        };
+
+
 
         static void Main(string[] args)
         {
@@ -187,6 +205,19 @@ namespace CSharpDrillExercisesPart4
 
 
             // Enumerable Type Example
+            // An enumeration is a set of integer constants increasing by one.
+            // Along with standard integers it allows for setting an alternate type
+            // with a colon such as byte, short, or long.
+            Console.WriteLine("Enumeration is useful for setting a fixed type that is");
+            Console.WriteLine("known to intellisense but also establishes the memory");
+            Console.WriteLine("needed and can be cycled (enumerated) through like a list.");
+
+            Console.WriteLine("\n\nOne common example would be to set the months of the year.");
+
+            Console.WriteLine("\nAnd then the months could easily be listed or called on.");
+            byte monthNumber = ((byte)Months.March) + 1;
+            Console.WriteLine("{0} is month number {1}", Months.March, monthNumber);
+
 
         }
 
